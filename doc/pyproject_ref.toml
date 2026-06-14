@@ -1,0 +1,44 @@
+# 这是 pyproject.toml 的参考配置
+# 实际由 Step 0 Sub-Agent 创建
+
+[project]
+name = "simulation-game"
+version = "1.0.0"
+description = "宇宙点状文明体系模拟软件 - 黑暗森林宇宙模拟"
+requires-python = ">=3.12"
+dependencies = [
+    "psutil>=5.9.0",
+    "matplotlib>=3.7.0",
+    "numpy>=1.24.0",
+]
+
+[project.scripts]
+simulation = "main:main"
+
+[tool.simulation]
+universe_size = 10000.0
+initial_civ_count = 5000
+max_civ_count = 20000
+birth_rate = 0.05
+total_steps = 1000
+name_generator_mode = "auto"
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "N", "UP"]
+
+[tool.mypy]
+python_version = "3.12"
+ignore_missing_imports = true
+check_untyped_defs = false
+disallow_any_unimported = false
+warn_return_any = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]

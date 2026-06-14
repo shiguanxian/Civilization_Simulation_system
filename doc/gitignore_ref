@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+
+# 虚拟环境
+.venv/
+venv/
+
+# 运行时输出
+output/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 测试缓存
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
