@@ -1,0 +1,3 @@
+- python main.py --fast — 高性能，仅终端输出
+- python main.py — 标准模式，实时 matplotlib 图表
+- python main.py --interactive — 交互模式，tkinter 控制面板 + 暂停/调速/单步/导出

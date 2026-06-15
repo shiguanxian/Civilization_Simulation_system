@@ -385,7 +385,7 @@ class InteractiveController:
             result: 上一步的执行结果。
         """
         # 终端输出
-        print(format_step_summary(result.stats))
+        #print(format_step_summary(result.stats))
 
         # 更新绘图器
         if self.plotter is not None and result.has_data:
@@ -409,6 +409,7 @@ class InteractiveController:
         self._status_bar.config(text=f"模拟完成，共 {self._total_steps} 步")
         if self._btn_pause.winfo_exists():
             self._btn_pause.config(text="暂停")
+        
 
     def _update_button_states(self) -> None:
         """更新按钮启用/禁用状态。"""

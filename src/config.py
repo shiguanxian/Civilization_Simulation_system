@@ -128,7 +128,7 @@ class SimulationConfig:
     # ============ 运行参数 ============
     run_mode: str = "standard"
     """运行模式："fast" = 高性能, "standard" = 标准, "interactive" = 交互"""
-    step_interval_seconds: float = 0.1
+    step_interval_seconds: float = 1
     """交互模式下每步间隔（秒），用户可调速"""
 
     # ============ 输出参数 ============
@@ -138,7 +138,7 @@ class SimulationConfig:
     """是否保存每步全量数据"""
     save_summary: bool = True
     """是否保存汇总数据"""
-    save_interval: int = 1
+    save_interval: int = 30
     """每 N 步保存一次"""
     plot_update_interval: int = 5
     """标准模式下每 N 步更新图表"""

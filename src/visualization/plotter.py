@@ -15,6 +15,11 @@ import matplotlib.pyplot as plt
 from src.entity import Civilization
 from src.output.stats import StepStats
 
+import matplotlib.pyplot as plt
+# 解决 Matplotlib 中文显示问题
+plt.rcParams['font.sans-serif'] = ['Microsoft YaHei', 'SimHei']
+plt.rcParams['axes.unicode_minus'] = False
+
 
 class RealtimePlotter:
     """实时图表绘制器，双面板布局（左：空间分布散点图，右：统计曲线图）。"""
