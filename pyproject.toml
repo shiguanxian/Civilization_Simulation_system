@@ -1,11 +1,48 @@
 [project]
 name = "simulation-game"
-version = "0.1.0"
-description = "Add your description here"
+version = "1.0.0"
+description = "宇宙点状文明体系模拟软件 - 黑暗森林宇宙模拟"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "psutil>=5.9.0",
+    "matplotlib>=3.7.0",
+    "numpy>=1.24.0",
+]
+
+[project.optional-dependencies]
+dev = [
     "mypy>=2.1.0",
     "pytest>=9.1.0",
     "ruff>=0.15.17",
 ]
+
+# 使用 python main.py 或 uv run python main.py 启动
+
+[tool.simulation]
+universe_size = 10000.0
+initial_civ_count = 5000
+max_civ_count = 20000
+birth_rate = 0.05
+total_steps = 1000
+name_generator_mode = "auto"
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "N", "UP"]
+
+[tool.mypy]
+python_version = "3.12"
+ignore_missing_imports = true
+check_untyped_defs = false
+disallow_any_unimported = false
+warn_return_any = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]

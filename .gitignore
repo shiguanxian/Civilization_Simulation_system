@@ -8,3 +8,23 @@ wheels/
 
 # Virtual environments
 .venv
+
+# IDE
+.vscode/
+.idea/
+
+# Output directory (runtime generated)
+output/
+!output/.gitkeep
+
+# Mypy cache
+.mypy_cache/
+
+# Ruff cache
+.ruff_cache/
+
+# Pytest cache
+.pytest_cache/
+
+# Type stubs
+*.pyi
