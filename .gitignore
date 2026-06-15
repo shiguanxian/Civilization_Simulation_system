@@ -28,3 +28,8 @@ output/
 
 # Type stubs
 *.pyi
+
+#oh-my-opencode
+.omo/
+
+.sisyphus/
